@@ -1,0 +1,94 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.handysan.digitalsignage.fragments.About"
+    android:rowCount="8"
+    android:columnCount="3">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <Space
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_row="0"
+        android:layout_column="0" />
+    <Space
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_row="0"
+        android:layout_column="2" />
+    <Space
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_row="1"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="251dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="About"
+        android:id="@+id/textView6"
+        android:layout_row="1"
+        android:layout_column="1" />
+
+    <Space
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_row="1"
+        android:layout_column="2" />
+    <Space
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_row="2"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="251dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="This app functions as a content delivery platform for the handySan Digital signage management system"
+        android:id="@+id/textView7"
+        android:layout_row="2"
+        android:layout_column="1" />
+
+    <Space
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_row="2"
+        android:layout_column="2" />
+
+    <Space
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_row="3"
+        android:layout_column="0" />
+
+    <TextView
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="This player is registered to www.handysan.com"
+        android:id="@+id/textView8"
+        android:layout_row="3"
+        android:layout_column="1" />
+
+    <Space
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_row="3"
+        android:layout_column="2" />
+
+    <Space
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_row="4"
+        android:layout_column="0" />
+    <Space
+        android:layout_width="67dp"
+        android:layout_height="70dp"
+        android:layout_row="4"
+        android:layout_column="2" />
+</GridLayout>
