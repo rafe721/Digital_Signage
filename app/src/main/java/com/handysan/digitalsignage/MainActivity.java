@@ -28,7 +28,7 @@ import com.handysan.digitalsignage.fragments.Registration;
 import com.handysan.digitalsignage.fragments.Settings;
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, DigitalSignage.OnFragmentInteractionListener,  Registration.OnFragmentInteractionListener, Settings.OnFragmentInteractionListener, About.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener, AndroidID.OnFragmentInteractionListener, DigitalSignage.OnFragmentInteractionListener,  Registration.OnFragmentInteractionListener, Settings.OnFragmentInteractionListener, About.OnFragmentInteractionListener {
 
     private String[] mNavigationDrawerItemTitles;
     private DrawerLayout mDrawerLayout;

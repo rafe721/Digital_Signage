@@ -3,10 +3,13 @@ package com.handysan.digitalsignage.fragments;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.*;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.handysan.digitalsignage.R;
 
@@ -65,7 +68,12 @@ public class AndroidID extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_android_id, container, false);
+            View view = inflater.inflate(R.layout.fragment_android_id, container, false);
+            TextView textView = (TextView) view.findViewById(R.id.android_id);
+
+            String Code = Settings.Secure.getString(view.getContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+            textView.setText(Code);
+            return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
