@@ -22,6 +22,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.handysan.digitalsignage.fragments.About;
+import com.handysan.digitalsignage.fragments.AndroidID;
 import com.handysan.digitalsignage.fragments.DigitalSignage;
 import com.handysan.digitalsignage.fragments.Registration;
 import com.handysan.digitalsignage.fragments.Settings;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity
 
     Fragment signageFragment = new DigitalSignage();
     Fragment registrationFragment = new Registration();
+    Fragment deviceId = new AndroidID();
     Fragment SettingsFragment = new Settings();
     Fragment aboutFrame = new About();
 
@@ -46,8 +48,8 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar); */
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
         this.updateFragmentFrame(signageFragment);
 
@@ -65,10 +67,10 @@ public class MainActivity extends AppCompatActivity
         mNavigationDrawerItemTitles= getResources().getStringArray(R.array.navigation_drawer_items_array);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-        /* ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, mDrawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mDrawerLayout.setDrawerListener(toggle);
-        toggle.syncState(); */
+        toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -128,7 +130,10 @@ public class MainActivity extends AppCompatActivity
             Toast.makeText( this, "Signage", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_registration) {
             this.updateFragmentFrame(this.registrationFragment);
-            Toast.makeText( this, "Registration", Toast.LENGTH_SHORT).show();
+            Toast.makeText( this, "Registration", Toast.LENGTH_SHORT).show();}
+        else if (id == R.id.nav_device_id) {
+                this.updateFragmentFrame(this.deviceId);
+                Toast.makeText( this, "Registration", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_settings) {
             this.updateFragmentFrame(this.SettingsFragment);
             Toast.makeText( this, "Settings", Toast.LENGTH_SHORT).show();
