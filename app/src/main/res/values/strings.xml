@@ -75,4 +75,11 @@
     <string name="pref_ringtone_silent">Silent</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
+
+    <!-- Constants -->
+    <string name="server_name">digital_signage</string>
+    <string name="db_name">digital_signage</string>
+    <string name="db_version">1</string>
+
+    <string name="user_agent_agent">DS_Client</string>
 </resources>

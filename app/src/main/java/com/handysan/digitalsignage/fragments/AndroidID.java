@@ -3,6 +3,7 @@ package com.handysan.digitalsignage.fragments;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.provider.*;
 import android.provider.Settings;
 import android.support.v4.app.Fragment;
@@ -11,7 +12,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.clientcomm.server.TCPServer;
+import com.example.clientcomm.utils.Properties;
 import com.handysan.digitalsignage.R;
+import com.handysan.digitalsignage.media.CampaignUpdateHandler;
+import com.handysan.digitalsignage.utils.KeyGen;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -69,10 +74,16 @@ public class AndroidID extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
             View view = inflater.inflate(R.layout.fragment_android_id, container, false);
+
             TextView textView = (TextView) view.findViewById(R.id.android_id);
+            TextView androidID_instr = (TextView) view.findViewById(R.id.android_id_instr);
+            TextView androidID_label = (TextView) view.findViewById(R.id.android_id_label);
+            Properties properties = new Properties(this.getContext(), getString(R.string.db_name));
 
             String Code = Settings.Secure.getString(view.getContext().getContentResolver(), Settings.Secure.ANDROID_ID);
-            textView.setText(Code);
+            textView.setText(new KeyGen().encode(this.getContext()));
+            /*androidID_instr.setText(properties.getCurrentIpAddress());
+            androidID_label.setText(properties.getCurrentPort()); */
             return view;
     }
 
